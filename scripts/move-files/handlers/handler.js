@@ -17,6 +17,7 @@ const fileIsType = (str, tests) => {
 const copyFileToLocations = (source, loc, file) => {
     loc.forEach(destination => {
         try {
+            console.log('Copying to', path.join(...destination.split('\\'), file))
             fse.copySync(
                 source,
                 path.join(...destination.split('\\'), file)
