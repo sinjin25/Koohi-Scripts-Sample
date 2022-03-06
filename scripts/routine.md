@@ -7,3 +7,5 @@ The following outlines a routine for gathering the required information to add a
 3. Run move-files, set filename meta, cover meta (optional)
 4. Run modify book, add missing information
 5. Run zip, archiving relevant files
+6. Run send-book
+7. Run send-meta
