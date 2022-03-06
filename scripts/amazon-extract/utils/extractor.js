@@ -4,6 +4,8 @@ const extractDescription = (root, obj) => {
     const description = extract(root, '#bookDescription_feature_div .a-expander-content')
     if (description) {
         obj.description = description.textContent.trim()
+    } else {
+        console.log('Description not found')
     }
 }
 
@@ -20,6 +22,8 @@ const extractCover = (root, finalObj) => {
             })
             finalObj.cover = largest
         }
+    } else {
+        console.log('Cover not found')
     }
 }
 
@@ -37,6 +41,8 @@ const extractVolume = (root, finalObj) => {
         // get current volume
         const cText = s.split(' of ')
         if (cText.length > 0) finalObj.volume = cText[0].replace(/[A-Za-z]/g, '').trim()
+    } else {
+        console.log('Series not found')
     }
 }
 
@@ -50,12 +56,19 @@ const extractAuthor = (root, finalObj) => {
                 href: author[i].getAttribute('href')
             })
         }
+    } else {
+        console.log('Author not found')
     }
 }
 
 const extractTitle = (root, finalObj) => {
-    const title = root.querySelector('#productTitle').textContent
-    finalObj.title_jp = title.replace(/（(.*?)$/, '').trim()
+    const title = root.querySelector('#productTitle')
+    if (title) {
+        console.log('text', title.textContent)
+        finalObj.title_jp = title.textContent.replace(/（(.*?)$/, '').trim()
+    } else {
+        console.log('Title not found')
+    }
 }
 
 function routine(root, finalObj) {
@@ -63,6 +76,7 @@ function routine(root, finalObj) {
     this.cover(root, finalObj)
     this.volume(root, finalObj)
     this.author(root, finalObj)
+    this.title(root, finalObj)
 }
 
 module.exports = {

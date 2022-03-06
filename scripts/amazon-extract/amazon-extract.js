@@ -34,7 +34,7 @@ if (files.length === 0) {
 let fileIndex = null
 while(fileIndex !== NO_CHOICE_SELECTED) {
     console.log(files)
-    fileIndex = readLineSync.keyInSelect(files, 'Select a file to extract from', {
+    fileIndex = readLineSync.keyInSelect(files, 'Select a file to extract from\n', {
         encoding: 'utf-8',
     })
 
@@ -49,10 +49,12 @@ while(fileIndex !== NO_CHOICE_SELECTED) {
         const bookInfo = {}
         Extractor.routine(root, bookInfo)
     
+        const fileName = readLineSync.question('Input file name?\n')
         fse.ensureDirSync(OUTPUT)
         fse.writeFileSync(
-            path.join(OUTPUT, `${readLineSync.question('Input file name?')}.json`),
+            path.join(OUTPUT, `${fileName}.json`),
             JSON.stringify(bookInfo, null, JSON_WHITE_SPACE)
         )
+        console.log(`\n\n${fileName} delivered to ${OUTPUT}\n\n`.green)
     }
 }
