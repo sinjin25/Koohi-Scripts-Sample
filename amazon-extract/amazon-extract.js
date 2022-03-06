@@ -27,6 +27,10 @@ const OUTPUT = path.join(DESTINATION_AGONISTC)
 
 // read dir, show options
 const files = fse.readdirSync(DUMP_AGNOSTIC, {encoding: 'utf-8'}).filter(i => i.match(/.htm/))
+if (files.length === 0) {
+    console.log('No files in dump folder', DUMP_AGNOSTIC)
+    process.exit(0)
+}
 let fileIndex = null
 while(fileIndex !== NO_CHOICE_SELECTED) {
     console.log(files)
@@ -45,8 +49,9 @@ while(fileIndex !== NO_CHOICE_SELECTED) {
         const bookInfo = {}
         Extractor.routine(root, bookInfo)
     
+        fse.ensureDirSync(OUTPUT)
         fse.writeFileSync(
-            path.join(__dirname, 'output', `${readLineSync.question('Input file name?')}.json`),
+            path.join(OUTPUT, `${readLineSync.question('Input file name?')}.json`),
             JSON.stringify(bookInfo, null, JSON_WHITE_SPACE)
         )
     }
