@@ -3,17 +3,17 @@
 // .csv copy to mysql/uploads
 
 require('colors')
-const { readdirSync } = require('fs-extra')
 const fse = require('fs-extra')
 const readLineSync = require('readline-sync')
 const path = require('path')
 
 // constants
 const {
-    dump, csvLocation, imgLocation
+    dump, csvLocation, imgLocation,
 } = require('./config.json')
 const DUMP_AGNOSTIC = dump.split('\\')
 const { NO_CHOICE_SELECTED } = require('./constants')
+const { fileIsType, copyFileToLocations, imageHandler, csvHandler, addAsMeta } = require('./handlers/handler')
 
 // ask for file
 const files = fse.readdirSync(path.join(...DUMP_AGNOSTIC))
@@ -28,40 +28,23 @@ while (fileIndex !== NO_CHOICE_SELECTED) {
         const selectedFile = files[fileIndex]
         let matched = null
         // img test
-        if (
-            selectedFile.match(/\.jpeg/) !== null
-            || selectedFile.match(/\.jpg/) !== null
-            || selectedFile.match(/\.png/) !== null
-            || selectedFile.match(/\.gif/) !== null
-        ) {
-            matched = true
-            // copy to image folders
-            imgLocation.forEach(loc => {
-                try {
-                    fse.copySync(
-                        path.join(...DUMP_AGNOSTIC, selectedFile),
-                        path.join(...loc.split('\\'), selectedFile)
-                    )
-                } catch (err) {
-                    console.error(err)
-                }
-            })
-            continue; // end early
+        if (fileIsType(selectedFile, [/\.jpg/, /\.jpg/, /\.png/, /\.gif/])) {
+            // optionally: add cover to json
+            addAsMeta(selectedFile, 'cover', imageHandler)
+            copyFileToLocations(
+                path.join(...DUMP_AGNOSTIC, selectedFile),
+                imgLocation,
+                selectedFile
+            )
         }
-        if (selectedFile.match(/\.csv/) !== null) {
-            matched = true
-            // copy to upload folder
-            csvLocation.forEach(loc => {
-                try {
-                    fse.copySync(
-                        path.join(...DUMP_AGNOSTIC, selectedFile),
-                        path.join(...loc.split('\\'), selectedFile)
-                    )
-                } catch (err) {
-                    console.error(err)
-                }
-            })
-            continue // end early
+        if (fileIsType(selectedFile, [/\.csv/])) {
+            // optional ask to overwrite a key
+            addAsMeta(selectedFile, 'csv filename', csvHandler)
+            copyFileToLocations(
+                path.join(...DUMP_AGNOSTIC, selectedFile),
+                csvLocation,
+                selectedFile
+            )
         }
     }
     // end while
