@@ -1,0 +1,5 @@
+{
+    "dump": "C:\\dump",
+    "csvLocation": ["C:\\csvUploads"],
+    "imgLocation": ["C:\\imgUploads", "C:\\backup\\img"]
+}
