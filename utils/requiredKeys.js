@@ -10,8 +10,8 @@ module.exports = function checkRequiredKeys(file, required = []) {
         const contents = require(file)
         // check against REQUIRED_KEY0
         const fileKeys = Object.keys(contents)
-        required.forEach(i => {
-            if (fileKeys.includes(i) === false) missing.push(i)
+        required.forEach((i, indx) => {
+            if (fileKeys.includes(i) === false) missing.push(`[${indx+1}] ${i}`)
         })
         return missing
     } catch(e) {

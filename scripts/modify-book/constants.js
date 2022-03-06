@@ -1,4 +1,4 @@
-const CHOICES = [
+const CORE_CHOICES = [
     'readability',
     'permission',
     'title',
@@ -12,14 +12,19 @@ const CHOICES = [
     if (a < b) return -1
 })
 
+const CHOICES = [
+    ...CORE_CHOICES,
+    // optional
+    ...[
+    'info',
+    'buy',
+    'episodes',
+    'aired'
+    ]
+]
+
 const REQUIRED_KEYS = [
-    'filename',
-    'medium',
-    'permission',
-    'readability',
-    'title',
-    'title_jp',
-    'vocab_list',
+    ...CORE_CHOICES
 ]
 
 module.exports = {
