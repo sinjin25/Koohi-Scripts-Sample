@@ -12,11 +12,17 @@ const {
     dump, csvLocation, imgLocation,
 } = require('./config.json')
 const DUMP_AGNOSTIC = dump.split('\\')
-const { NO_CHOICE_SELECTED } = require('./constants')
+const { NO_CHOICE_SELECTED, acceptableTypes } = require('./constants')
 const { fileIsType, copyFileToLocations, imageHandler, csvHandler, addAsMeta } = require('./handlers/handler')
 
-// ask for file
+// ask for files of type
 const files = fse.readdirSync(path.join(...DUMP_AGNOSTIC))
+                    .filter((item) => {
+                        for (let i = 0; i < acceptableTypes.length; i++) {
+                            if (item.match(acceptableTypes[i]) !== null) return true
+                        }
+                        return false;
+                    })
 if (files.length === 0) {
     console.log("No files found in folder".red, path.join(...DUMP_AGNOSTIC))
     process.exit(0)
