@@ -1,0 +1,6 @@
+{
+    "dump": "C:\\fuck\\flfl-scripts\\output",
+    "baseUrl": "http://localhost:3001/route/endpoint",
+    "recountUrl": "http://localhost:3001/route/endpoint?param=val",
+    "pass": "bananas"
+}

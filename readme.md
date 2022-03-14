@@ -1,5 +1,10 @@
 # Intro
-Each folder holds the supporting files for a script that's the same name as the folder.
+THIS IS A CODING SAMPLE
+The following repository holds various scripts for handling tasks on a production website. They are meant to standardize trivial/routine tasks.
+Each folder in /scripts/ holds the supporting files for a script that's the same name as the folder.
+
+A script would be run like:
+node scripts/01a-amazon-download/amazon-download.js
 
 # Files
 ## Amazon-Extract
