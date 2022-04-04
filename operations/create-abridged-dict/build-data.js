@@ -1,11 +1,11 @@
 require('colors')
 const fse = require('fs-extra')
-const main = require('./main.js')
+const main = require('./01-build-data/main.js')
 const path = require('path')
-const { rowsPerQuery } = require('../config.json')
+const { rowsPerQuery } = require('./config.json')
 
 // erase and write new file
-const writeStream = fse.createWriteStream(path.join('..', 'output.csv'), {flags: 'w'})
+const writeStream = fse.createWriteStream(path.join('output.csv'), {flags: 'w'})
 
 // recursive handling
 const loop = (opts) => {

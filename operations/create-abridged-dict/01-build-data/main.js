@@ -22,6 +22,7 @@ module.exports = async function(opts) {
 
     // select items from jmdict
     const queue = new MyQueue()
+    queue.notificationOn = 50000
     console.log('awaiting getItems'.blue)
     await getItems(myDb, {offset: opts.offset, rows: opts.rows})
     .then(([data]) => {

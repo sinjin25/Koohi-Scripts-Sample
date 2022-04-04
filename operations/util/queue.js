@@ -9,6 +9,7 @@ class MyQueue {
     completed = 0
     index = 0
     finishable = false
+    notificationOn = 1
     canFinish() {
         this.finishable = true
         if (this.completed === this.tasks.length && this.finishable) {
@@ -21,7 +22,7 @@ class MyQueue {
     }
     next() {
         while( this.running < this.concurrency && this.index < this.tasks.length) {
-            if (this.completed % 5000 === 0) console.log('adding a job'.blue, this.tasks.length - this.completed)
+            if (this.completed % this.notificationOn === 0) console.log('adding a job'.blue, this.tasks.length - this.completed)
             const task = this.tasks[this.index]
             this.index++
             task(() => {

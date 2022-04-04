@@ -15,6 +15,7 @@ const setupValues = (i, arr) => {
 }
 
 module.exports = async function(db, rows) {
+    if (rows.length < 1) return Promise.resolve()
     const prepValues = []
     const valueRows = rows.map((i) => {
         setupValues(i, prepValues)
@@ -28,6 +29,8 @@ module.exports = async function(db, rows) {
         ${prepValues.join('\n')}
         `
         fse.writeFile('insert-data-err-log.txt', data)
+        console.log('failure'.red)
+        console.log(`INSERT INTO data_search_dict (dictNum, definition) VALUES ${valueRows.join(', ')}`.red, prepValues, rows.length)
         return Promise.reject(err)
     })
 }
