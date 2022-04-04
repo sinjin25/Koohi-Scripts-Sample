@@ -1,0 +1,23 @@
+{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sqlState":"#HY000"}
+        INSERT INTO data_search_dict (dictNum, definition) VALUES (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?), (?, ?)
+        1915710
+"Chinese system of musical sounds"
+1915720
+"codes of laws and ethics"
+1915730
+"to fix the rate"
+1915740
+"sharp sword"
+1915750
+"wide-awake to one's interests"
+1915760
+"justifiable"
+1915760
+"justifiable"
+1915770
+"for short"
+1915780
+"abridged sentence"
+1915790
+"winning hand with the score doubled twice"
+        

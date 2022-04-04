@@ -11,6 +11,9 @@ class MyQueue {
     finishable = false
     canFinish() {
         this.finishable = true
+        if (this.completed === this.tasks.length && this.finishable) {
+            return this.finish()
+        }
     }
     finish() {
         console.log('Job is done', `completed ${this.completed}`.green)
@@ -24,7 +27,7 @@ class MyQueue {
             task(() => {
                 this.running--
                 this.completed++
-                if (this.completed === this.tasks.length) {
+                if (this.completed === this.tasks.length && this.finishable) {
                     return this.finish()
                 }
                 this.next()
