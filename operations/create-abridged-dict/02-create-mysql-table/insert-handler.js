@@ -14,7 +14,7 @@ module.exports = (queue, rows, db) => {
             subRowPointer = subRow.length - 1
         }
         const row = rows[i]
-        if (row.length === 2) subRow[subRowPointer].push(row)
+        if (row.length === 3) subRow[subRowPointer].push(row)
     }
     fse.writeJSONSync('debug.json', subRow, {
         spaces: 4,

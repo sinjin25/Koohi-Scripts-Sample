@@ -22,15 +22,15 @@ module.exports = async function(db, rows) {
         const temp = arrayToPreparedStatement(i)
         return `(${temp.join(', ')})`
     })
-    return db.execute(`INSERT INTO data_search_dict (dictNum, definition) VALUES ${valueRows.join(', ')}`, prepValues)
+
+    const sql = `INSERT INTO data_search_dict (dictId, dictNum, definition) VALUES ${valueRows.join(', ')}`
+    return db.execute(sql, prepValues)
     .catch((err) => {
         const data = `${JSON.stringify(err)}
-        ${`INSERT INTO data_search_dict (dictNum, definition) VALUES ${valueRows.join(', ')}`}
+        ${sql}
         ${prepValues.join('\n')}
         `
         fse.writeFile('insert-data-err-log.txt', data)
-        console.log('failure'.red)
-        console.log(`INSERT INTO data_search_dict (dictNum, definition) VALUES ${valueRows.join(', ')}`.red, prepValues, rows.length)
         return Promise.reject(err)
     })
 }

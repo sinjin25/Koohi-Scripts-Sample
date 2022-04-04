@@ -29,7 +29,7 @@ module.exports = async function(opts) {
         data.forEach((i) => {
             const lines = definitionTransform(i.definition)
             .map((str) => {
-                return `${i.kanji}${delimiter}${i.dictNum}${delimiter}${str}`
+                return `${i.kanji}${delimiter}${i.id}${delimiter}${i.dictNum}${delimiter}${str}`
             })
             queue.tasks.push(function(cb) {
                 opts.stream.write(`${lines.join('\n')}\n`, cb)
