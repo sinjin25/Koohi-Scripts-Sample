@@ -3,13 +3,13 @@
 
 require('colors')
 const setupDb = require('../../util/db.js')
-const createDictTable = require('./create-dict-table.js')
 const getItems = require('./get-items.js')
 const definitionTransform = require('../../util/definitionTransform.js')
 const config = require('../../config.json')
+const { delimiter } = require('../config.json')
 const MyQueue = require('../../util/queue.js')
 
-module.exports = async function(offset, rowsPerQuery, stream) {
+module.exports = async function(opts) {
     // setup db
     const myDb = await setupDb(config)
     .then((result) => {
@@ -20,28 +20,18 @@ module.exports = async function(offset, rowsPerQuery, stream) {
         return Promise.reject(err)
     })
 
-    // create dict table
-    console.log('awaiting createDictTable'.blue)
-    await createDictTable(myDb)
-    .then((result) => {
-        console.log('finished createDictTable'.blue, result)
-    })
-    .catch((err) => {
-        return Promise.reject(err)
-    })
-
     // select items from jmdict
     const queue = new MyQueue()
     console.log('awaiting getItems'.blue)
-    await getItems(myDb, offset, rowsPerQuery)
-    .then(([rows, fields]) => {
-        rows.forEach((i) => {
+    await getItems(myDb, {offset: opts.offset, rows: opts.rows})
+    .then(([data]) => {
+        data.forEach((i) => {
             const lines = definitionTransform(i.definition)
             .map((str) => {
-                return `${i.kanji}|${i.dictNum}|${str}`
+                return `${i.kanji}${delimiter}${i.dictNum}${delimiter}${str}`
             })
             queue.tasks.push(function(cb) {
-                stream.write(`${lines.join('\n')}\n`, cb)
+                opts.stream.write(`${lines.join('\n')}\n`, cb)
             })
         })
     })
