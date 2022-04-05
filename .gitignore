@@ -4,3 +4,4 @@ config.json
 output
 output.csv
 debug
+*log
