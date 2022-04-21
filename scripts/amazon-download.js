@@ -9,6 +9,13 @@ const {
 } = require('./01a-amazon-download/config.json')
 const DUMP_AGNOSTIC = path.join(...dump.split('\\'))
 
+// log url so that we can add it to the json later
+const logUrl = require('./01a-amazon-download/log-url.js')
+const addToLog = (url, outputFileName) => {
+    console.log('Writing to log'.blue)
+    return logUrl(url, outputFileName)
+}
+
 const cleanUrl = (url) => {
     // fragile solution
     const m = url.split(/\/ref/)[0]
@@ -38,6 +45,10 @@ const doWork = async (driver, By, url) => {
                 )
             })
             .catch(console.log)
+    await addToLog(
+        cleanedUrl,
+        `${productTitle || url.replace(/\\/g, '-')}.html`
+    )
     console.log(`Finished process ${cleanedUrl}`)
 }
 

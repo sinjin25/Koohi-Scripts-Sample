@@ -1,9 +1,12 @@
 const extract = require('./extract.js')
+const Turndown = require('turndown')
+const turndownService = new Turndown()
 
 const extractDescription = (root, obj) => {
     const description = extract(root, '#bookDescription_feature_div .a-expander-content')
     if (description) {
-        obj.description = description.textContent.trim()
+        /* obj.description = description.textContent.trim() */
+        obj.description = turndownService.turndown(description.innerHTML)
     } else {
         console.log('Description not found')
     }

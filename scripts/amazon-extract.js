@@ -11,15 +11,16 @@ const path = require('path')
 const readLineSync = require('readline-sync')
 const {
     NO_CHOICE_SELECTED, JSON_WHITE_SPACE
-} = require('./constants.js')
+} = require('./01-amazon-extract/constants.js')
 
 // utils
-const Extractor = require('./utils/extractor')
+const Extractor = require('./01-amazon-extract/utils/extractor')
+const readDownloadLog = require('./01-amazon-extract/utils/read-download-log')
 
 // folder locations
 const {
     destination, dump
-} = require('./config.json')
+} = require('./01-amazon-extract/config.json')
 const { readlinkSync } = require('fs-extra')
 const DESTINATION_AGONISTC = path.join(...destination.split('\\'))
 const DUMP_AGNOSTIC = path.join(...dump.split('\\'))
@@ -51,10 +52,22 @@ while(fileIndex !== NO_CHOICE_SELECTED) {
     
         const fileName = readLineSync.question('Input file name?\n')
         fse.ensureDirSync(OUTPUT)
-        fse.writeFileSync(
-            path.join(OUTPUT, `${fileName}.json`),
-            JSON.stringify(bookInfo, null, JSON_WHITE_SPACE)
-        )
-        console.log(`\n\n${fileName} delivered to ${OUTPUT}\n\n`.green)
+
+        readDownloadLog(activeFile)
+        .catch(() => {
+            const msg = `Could not find ${activeFile} in the downloads log`
+            console.log(msg.red)
+            return false
+        })
+        .then((foundUrl) => {
+            if (foundUrl) bookInfo.info = foundUrl
+            fse.writeFile(
+                path.join(OUTPUT, `${fileName}.json`),
+                JSON.stringify(bookInfo, null, JSON_WHITE_SPACE)
+            )
+            .then(() => {
+                console.log(`\n\n${fileName} delivered to ${OUTPUT}\n\n`.green)
+            })
+        })
     }
 }

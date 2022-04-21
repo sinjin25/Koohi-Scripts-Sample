@@ -25,6 +25,7 @@
     "node-html-parser": "^5.2.0",
     "readline-sync": "^1.4.10",
     "selenium-webdriver": "^4.1.1",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "turndown": "^7.1.1"
   }
 }
