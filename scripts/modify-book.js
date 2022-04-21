@@ -8,14 +8,14 @@ const readLineSync = require('readline-sync')
 const fse = require('fs-extra')
 
 // CONSTANTS
-const { destination, dump } = require('./config.json')
+const { destination, dump } = require('./03-modify-book/config.json')
 const DESTINATION_AGNOSTIC = destination.split('\\')
 const DUMP_AGNOSTIC = dump.split('\\')
 const {
     NO_CHOICE_SELECTED,
     CHOICES,
     REQUIRED_KEYS,
-} = require('./constants.js')
+} = require('./03-modify-book/constants.js')
 
 // ask for file to modify
 let fileIndex = null
@@ -24,11 +24,11 @@ if (files.length === 0) {
     console.log("No files in dump folder".red, path.join(...DUMP_AGNOSTIC))
     process.exit(0)
 }
-fileIndex = readLineSync.keyInSelect(files, 'Select a JSON to modify')
+fileIndex = readLineSync.keyInSelect(files, 'Select a JSON to modify'.green)
 selectedFile = files[fileIndex]
 
 // look for missing keys
-const checkRequiredKeys = require('../../utils/requiredKeys')
+const checkRequiredKeys = require('../utils/requiredKeys')
 const missing = checkRequiredKeys(path.join(...DESTINATION_AGNOSTIC, selectedFile), REQUIRED_KEYS)
 if (missing.length > 0) {
     console.log('REQUIRED KEYS MISSING'.red)
@@ -47,7 +47,7 @@ let keys = []
 let values = []
 let choiceIndex = null
 while (choiceIndex !== NO_CHOICE_SELECTED) {
-    choiceIndex = readLineSync.keyInSelect(CHOICES, 'Select a key to modify\n')
+    choiceIndex = readLineSync.keyInSelect(CHOICES, 'Select a key to modify\n'.green)
     if (choiceIndex !== NO_CHOICE_SELECTED) {
         const choice = CHOICES[choiceIndex]
         // ask for a value
@@ -65,8 +65,10 @@ if (!keys.length > 0 || !values.length > 0) {
     console.log('No keys chosen to be modified'.red)
     process.exit(0)
 }
-console.log(`Adding to ${selectedFile}`, `keys: `, `${keys} values:`, `${values}`)
-if (readLineSync.keyInYN('Would you like to commit these changes?')) {
-    const addMeta = require('../../utils/addMeta')
+const confirmMap = keys.map((i, index) => `${keys[index]}: ${values[index]}`)
+const confirmMsg = `Adding to ${selectedFile}\n${confirmMap.join('\n')}`.blue
+console.log(confirmMsg)
+if (readLineSync.keyInYN('Would you like to commit these changes?'.green)) {
+    const addMeta = require('../utils/addMeta')
     addMeta(path.join(...DESTINATION_AGNOSTIC), selectedFile, keys, values)
 }

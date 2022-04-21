@@ -7,8 +7,8 @@ const readLineSync = require('readline-sync')
 const args = require('minimist')(process.argv.slice(2))
 
 // constants
-const { destination, dump } = require('./config.json')
-const { ZLIB_BEST_COMPRESSION, NO_CHOICE_SELECTED, BOOK_TYPES, WARNINGS } = require('./constants.js')
+const { destination, dump } = require('./04-zip/config.json')
+const { ZLIB_BEST_COMPRESSION, NO_CHOICE_SELECTED, BOOK_TYPES, WARNINGS } = require('./04-zip/constants.js')
 const DESTINATION_AGNOSTIC = destination.split('\\') // work on multiple OS
 
 // INPUT: Book type

@@ -10,10 +10,10 @@ const path = require('path')
 // constants
 const {
     dump, csvLocation, imgLocation,
-} = require('./config.json')
+} = require('./02-move-files/config.json')
 const DUMP_AGNOSTIC = dump.split('\\')
-const { NO_CHOICE_SELECTED, acceptableTypes } = require('./constants')
-const { fileIsType, copyFileToLocations, imageHandler, csvHandler, addAsMeta } = require('./handlers/handler')
+const { NO_CHOICE_SELECTED, acceptableTypes } = require('./02-move-files/constants')
+const { fileIsType, copyFileToLocations, imageHandler, csvHandler, addAsMeta } = require('./02-move-files/handlers/handler')
 
 // ask for files of type
 const files = fse.readdirSync(path.join(...DUMP_AGNOSTIC))
