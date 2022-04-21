@@ -6,12 +6,12 @@ const args = process.argv.slice(2) // represents urls
 
 const {
     geckodriverPath, dump
-} = require('./config.json')
+} = require('./01a-amazon-download/config.json')
 const DUMP_AGNOSTIC = path.join(...dump.split('\\'))
 
 const cleanUrl = (url) => {
     // fragile solution
-    const m = url.match(/(.*?)\/product\/(.*?)\//)[0]
+    const m = url.split(/\/ref/)[0]
     if (m === null) {
         console.log('Possibly invalid url format for ', url)
         process.exit(0)
