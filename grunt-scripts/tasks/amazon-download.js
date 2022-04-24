@@ -6,10 +6,11 @@ const openPage = require('../amazon-download/openPage')
  */
 module.exports = function(grunt) {
     grunt.registerTask('amazon-download-func', function() {
-        grunt.option('no-color', true)
+        grunt.log.writeln('Using 11111')
         const done = this.async()
         const url = grunt.config.get('amazon-download.url')
         if (!url) grunt.warn('Missing a url. Use the url flag ex: grunt amazon-download --src=123')
+        grunt.log.writeln('Using url', url)
         return openFirefox()
         .then((driver) => {
             return openPage(driver, cleanUrl(url))
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
             .then(() => {
                 return driver.quit()
             })
+            .then(done)
         })
-        .then(done)
     })
 }
