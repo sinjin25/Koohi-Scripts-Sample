@@ -6,10 +6,10 @@ const fetch = require('node-fetch')
 
 const {
     FIELDS, JSON_MAP
-} = require('./constants.js')
+} = require('./06-send-meta/constants.js')
 const {
     dump, baseUrl, pass, JSON_WHITE_SPACE
-} = require('./config.json')
+} = require('./06-send-meta/config.json')
 const DUMP_AGNOSTIC = path.join(...dump.split('\\'))
 
 // read a JSON file

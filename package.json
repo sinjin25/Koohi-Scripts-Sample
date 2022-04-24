@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "grunt": "grunt",
+    "grunt:verbose": "grunt -v -d",
+    "g:amazon-download": "grunt amazon-download --a=123"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/selenium-webdriver": "^4.0.19",
     "archiver": "^5.3.0",
     "chai": "^4.3.6",
     "chai-spies": "^1.0.0",
@@ -27,5 +31,11 @@
     "selenium-webdriver": "^4.1.1",
     "shelljs": "^0.8.5",
     "turndown": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/grunt": "^0.4.27",
+    "grunt": "^1.5.2",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^4.0.1"
   }
 }

@@ -6,10 +6,10 @@ const fetch = require('node-fetch')
 
 const {
     FIELDS, JSON_WHITE_SPACE
-} = require('./constants.js')
+} = require('./05-send-book/constants.js')
 const {
     dump, baseUrl, pass, recountUrl
-} = require('./config.json')
+} = require('./05-send-book/config.json')
 const DUMP_AGNOSTIC = path.join(...dump.split('\\'))
 
 // read a JSON file
@@ -29,7 +29,7 @@ FIELDS.forEach(i => {
         console.log(`${i}: ${contents[i]}`)
         queryParams.push(`${i}=${contents[i]}`)
     } else {
-        console.log(`MISSING i`.red)
+        console.log(`MISSING`.red, `${i}`.red)
     }
 })
 
@@ -57,5 +57,6 @@ fetch(url)
         JSON.stringify(res, null, JSON_WHITE_SPACE)
     )
     fetch(recountUrl)
-    console.log(`Insert ID: ${res.slice(-1)?.items?.insertId}`)
+    console.log(res.slice(-1))
+    console.log(`Insert ID: ${res.slice(-1).options.bookId}`)
 })
