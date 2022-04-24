@@ -1,0 +1,18 @@
+{
+    "options": {
+        "questions": [
+            {
+                "config": "prompt-example.question1Answer",
+                "message": "hey",
+                "type": "list",
+                "choices": ["hi", "hello", "sup"]
+            },
+            {
+                "config": "prompt-example.question2Answer",
+                "message": "heyyo",
+                "type": "list",
+                "choices": ["yoooo", "yuuuuu", "yiii"]
+            }
+        ]
+    }
+}
