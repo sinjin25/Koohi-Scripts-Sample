@@ -10,7 +10,7 @@
         const path = require('path')
 
         const populate = require('../move-files/populatePrompt')
-        const src = grunt.myGetConfig('src', 'move-files.src')
+        const src = grunt.myGetConfig('dataSrc', 'move-files.dataSrc')
         const done = this.async()
 
         grunt.log.writeln('src is'+src)
@@ -58,7 +58,7 @@
             }
             queue.push(
                 copyFileToLocations({
-                    src: grunt.myGetConfig('src', 'move-files.src'),
+                    src: grunt.myGetConfig('dataSrc', 'move-files.dataSrc'),
                     loc: dest,
                     file: aFile,
                 })

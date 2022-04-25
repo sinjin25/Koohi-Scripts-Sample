@@ -1,5 +1,6 @@
 {
     "dest": "C:\\fuck\\flfl-scripts\\output",
     "src": "C:\\fuck\\flfl-scripts\\dump",
-    "geckodriverPath": "C:\\Selenium\\geckodriver.exe"
+    "geckodriverPath": "C:\\Selenium\\geckodriver.exe",
+    "dataSrc": "C:\\Users\\Sinj\\Downloads\\release 4-20\\split 1"
 }
