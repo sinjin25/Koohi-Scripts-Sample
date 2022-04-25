@@ -63,4 +63,12 @@
             done()
         })
     })
+
+    // =================== BUNDLE ======================== //
+    // amazon-extact loop
+    grunt.registerTask('amazon-extract', [
+        'amazon-extract__add-choices', // populate
+        'prompt:amazon-extract__select', // select
+        'amazon-extract-func', // run
+    ])
 }

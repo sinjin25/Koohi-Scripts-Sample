@@ -180,4 +180,22 @@
             grunt.task.run('move-files-meta-loop')
         }
     })
+
+    // ======== BUNDLE =============== //
+    // move-files
+    grunt.registerTask('move-files', [ // main
+        'move-files__add-choices',
+        'prompt:move-files__select',
+        'move-files-func',
+        'move-files-meta'
+    ])
+    grunt.registerTask('move-files-meta', [ // pre-loop
+        'move-files__loop-add-choices',
+        'move-files-meta-loop'
+    ])
+    grunt.registerTask('move-files-meta-loop', [ // loop
+        'prompt:move-files__select-meta',
+        'move-files__loop-add-meta',
+        'move-files__loop-clean',
+    ])
  }

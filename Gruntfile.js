@@ -36,33 +36,4 @@ module.exports = function(grunt) {
         'prompt:prompt-example', // from grunt-prompt
         'prompt-example-func' // from /tasks/prompt-example
     ])
-    // amazon-download
-    grunt.registerTask('amazon-download', [
-        'prompt:amazon-download',
-        'amazon-download-func'
-    ])
-
-    // amazon-extact loop
-    grunt.registerTask('amazon-extract', [
-        'amazon-extract__add-choices', // populate
-        'prompt:amazon-extract__select', // select
-        'amazon-extract-func', // run
-    ])
-
-    // move-files
-    grunt.registerTask('move-files', [ // main
-        'move-files__add-choices',
-        'prompt:move-files__select',
-        'move-files-func',
-        'move-files-meta'
-    ])
-    grunt.registerTask('move-files-meta', [ // pre-loop
-        'move-files__loop-add-choices',
-        'move-files-meta-loop'
-    ])
-    grunt.registerTask('move-files-meta-loop', [ // loop
-        'prompt:move-files__select-meta',
-        'move-files__loop-add-meta',
-        'move-files__loop-clean',
-    ])
 }

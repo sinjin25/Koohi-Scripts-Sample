@@ -43,4 +43,10 @@ module.exports = function(grunt) {
             .then(done)
         })
     })
+    // ===================== BUNDLE =================== //
+    // amazon-download
+    grunt.registerTask('amazon-download', [
+        'prompt:amazon-download',
+        'amazon-download-func'
+    ])
 }
