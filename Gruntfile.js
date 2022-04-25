@@ -10,13 +10,26 @@ module.exports = function(grunt) {
     grunt.myGetConfig = (globalStr, overrideStr) => {
         return this.config.get(overrideStr) || this.config.get(globalStr)
     }
+    const promptsConfig = require('./grunt-scripts/tasks/prompt')
+    const configConfig = require('./grunt-scripts/tasks/config')
+
     grunt.initConfig({
-        ...require('./grunt-scripts/tasks/prompt'),
-        ...require('./grunt-scripts/tasks/config')
+        prompt: {...promptsConfig},
+        ...configConfig
     })
 
     grunt.loadNpmTasks('grunt-prompt');
     grunt.loadTasks('./grunt-scripts/tasks')
+
+    grunt.registerTask('default', function() {
+        grunt.log.writeln('grunt is working')
+    })
+
+    grunt.registerTask('test-prompts', function() {
+        grunt.log.writeln(Object.keys(promptsConfig).join(','))
+        const x = grunt.config('prompt')
+        grunt.log.writeln(Object.keys(x).join(','))
+    })
 
     // promp-example
     grunt.registerTask('prompt-example', [
@@ -34,5 +47,22 @@ module.exports = function(grunt) {
         'amazon-extract__add-choices', // populate
         'prompt:amazon-extract__select', // select
         'amazon-extract-func', // run
+    ])
+
+    // move-files
+    grunt.registerTask('move-files', [ // main
+        'move-files__add-choices',
+        'prompt:move-files__select',
+        'move-files-func',
+        'move-files-meta'
+    ])
+    grunt.registerTask('move-files-meta', [ // pre-loop
+        'move-files__loop-add-choices',
+        'move-files-meta-loop'
+    ])
+    grunt.registerTask('move-files-meta-loop', [ // loop
+        'prompt:move-files__select-meta',
+        'move-files__loop-add-meta',
+        'move-files__loop-clean',
     ])
 }

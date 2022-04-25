@@ -1,0 +1,62 @@
+{
+    "options": {
+        "questions": [
+            {
+                "config": "move-files.selectedJSON",
+                "type": "list",
+                "message": "What JSON file would you like to associate akushoku reijou.csv with?",
+                "choices": [
+                    {
+                        "name": "ecriture.json"
+                    },
+                    {
+                        "name": "ecriture　新人作家・杉浦李奈の推論 (角川文庫).html.json"
+                    },
+                    {
+                        "name": "free life fantasy 2.json"
+                    },
+                    {
+                        "name": "hachigatsu juugonichi.json"
+                    },
+                    {
+                        "name": "misshitsu ougonjidai.json"
+                    },
+                    {
+                        "name": "ni nen gumi.json"
+                    },
+                    {
+                        "name": "oshi.json"
+                    },
+                    {
+                        "name": "resp_akushoku reijou.json"
+                    },
+                    {
+                        "name": "resp_misshitsu ougonjidai.json"
+                    },
+                    {
+                        "name": "resp_oshi.json"
+                    },
+                    {
+                        "name": "savage fang.json"
+                    },
+                    {
+                        "name": "アルセーヌ・ルパン対明智小五郎　黄金仮面の真実 (角川文庫).html.json"
+                    },
+                    {
+                        "name": "サベージファングお嬢様　史上最強の傭兵は史上最凶の暴虐令嬢となって二度目の世界を無双する (富士見ファンタジア文庫).html.json"
+                    },
+                    {
+                        "name": "八月十五日に吹く風 (講談社文庫).html.json"
+                    },
+                    {
+                        "name": "密室黄金時代の殺人 雪の館と六つのトリック (宝島社文庫).html.json"
+                    },
+                    {
+                        "name": "悪食令嬢と狂血公爵　～その魔物、私が美味しくいただきます！～ (Kラノベブックスf).html.json"
+                    }
+                ],
+                "default": null
+            }
+        ]
+    }
+}
