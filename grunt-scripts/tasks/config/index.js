@@ -3,5 +3,6 @@ module.exports = {
     "amazon-download": require('./amazon-download.json'),
     "prompt-example": require('./prompt-example.json'),
     "move-files": require('./move-files.json'),
+    "rn-raw-files-files": require('./rename-raw-files.json'),
     ...require('./globalConfig.json')
 }
