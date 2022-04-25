@@ -27,7 +27,7 @@
                 })
                 .then((foundUrl) => {
                     if (foundUrl) bookInfo.info = foundUrl
-                    fse.writeFile(
+                    return fse.writeFile(
                         path.join(dest, `${aFile}.json`),
                         JSON.stringify(bookInfo, null, 4)
                     )
