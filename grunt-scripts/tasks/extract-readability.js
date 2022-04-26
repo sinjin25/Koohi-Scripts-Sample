@@ -33,7 +33,7 @@
             const actions = []
             let chain = Promise.resolve()
             for (let aRow of formattedData) {
-                chain = chain.then(() => logReadability(path.join(dest, 'test.csv'), aRow))
+                chain = chain.then(() => logReadability(path.join(dest, 'readability-log.csv'), aRow))
             }
             return chain
         })

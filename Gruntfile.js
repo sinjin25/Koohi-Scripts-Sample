@@ -37,6 +37,10 @@ module.exports = function(grunt) {
                 task: "grunt move-files".green,
                 description: `Move the renamed files from 'rename-raw-files' to the correct directories for the application (MYSQL upload folder, cover folder, etc.)`.blue
             },
+            READABILITY: {
+                task: "grunt extract-readability".green,
+                description: `Check the 'xxx read.txt' files for the readability score. Record it in a centralized log. This will be useful when running 'modify-book' later`.blue
+            },
         }
         const keys = Object.keys(TASKS)
         keys.forEach((aKey) => {
