@@ -59,7 +59,7 @@
             )
         })
         .then(() => {
-            grunt.config('prompt.amazon-extract__select', require('./prompt/amazon-extract/select.json'))
+            grunt.config('prompt:amazon-extract__select', require('./prompt/amazon-extract/select.json'))
             done()
         })
     })

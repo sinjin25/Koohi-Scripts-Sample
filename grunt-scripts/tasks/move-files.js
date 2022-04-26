@@ -33,7 +33,7 @@
             )
         })
         .then(() => {
-            grunt.config('prompt.move-files__select', require('./prompt/move-files/select.json'))
+            grunt.config('prompt:move-files__select', require('./prompt/move-files/select.json'))
             done()
         })
     })
@@ -109,7 +109,7 @@
             )
         })
         .then(() => { // modify config
-            grunt.config('prompt.move-files__select-meta', require('./prompt/move-files/meta-select.json'))
+            grunt.config('prompt:move-files__select-meta', require('./prompt/move-files/meta-select.json'))
             done()
         })
         .catch((err) => {
@@ -175,7 +175,7 @@
         // change question
         const options = grunt.config.get('prompt.move-files__select-meta.options')
         options.questions[0].message = `What JSON file would you like to associate ${grunt.config.get('move-files.filesToMap').slice(0, 1)} with?`
-        grunt.config('prompt.move-files__select-meta.options', options)
+        grunt.config('prompt:move-files__select-meta.options', options)
         if (filesToMap.length !== 0) {
             grunt.task.run('move-files-meta-loop')
         }
