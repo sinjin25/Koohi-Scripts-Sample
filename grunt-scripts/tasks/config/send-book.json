@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:3001/administration/list",
+    "recountUrl": "http://localhost:3001/administration/recount-books?pass=bananas&limit=3",
+    "metaUrl": "http://localhost:3001/administration/meta",
+    "pass": "bananas"
+}

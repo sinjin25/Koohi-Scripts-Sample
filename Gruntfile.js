@@ -52,9 +52,17 @@ module.exports = function(grunt) {
     })
 
     grunt.registerTask('test-prompts', function() {
-        grunt.log.writeln(Object.keys(promptsConfig).join(','))
+        grunt.log.writeln(
+            Object.keys(promptsConfig)
+            .sort()
+            .join(',')
+        )
         const x = grunt.config('prompt')
-        grunt.log.writeln(Object.keys(x).join(','))
+        grunt.log.writeln(
+            Object.keys(x)
+            .sort()
+            .join(',')
+        )
     })
 
     // promp-example

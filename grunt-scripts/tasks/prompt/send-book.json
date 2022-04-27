@@ -1,0 +1,158 @@
+{
+    "options": {
+        "questions": [
+            {
+                "type": "list",
+                "config": "send-book.selectedFile",
+                "message": "What JSON file do you want to send?",
+                "default": null,
+                "choices": [
+                    {
+                        "name": "ecriture.json",
+                        "value": {
+                            "name": "ecriture.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\ecriture.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "ecriture　新人作家・杉浦李奈の推論 (角川文庫).html.json",
+                        "value": {
+                            "name": "ecriture　新人作家・杉浦李奈の推論 (角川文庫).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\ecriture　新人作家・杉浦李奈の推論 (角川文庫).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "free life fantasy 2.json",
+                        "value": {
+                            "name": "free life fantasy 2.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\free life fantasy 2.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "hachigatsu juugonichi.json",
+                        "value": {
+                            "name": "hachigatsu juugonichi.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\hachigatsu juugonichi.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "misshitsu ougonjidai.json",
+                        "value": {
+                            "name": "misshitsu ougonjidai.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\misshitsu ougonjidai.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "ni nen gumi.json",
+                        "value": {
+                            "name": "ni nen gumi.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\ni nen gumi.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "oshi.json",
+                        "value": {
+                            "name": "oshi.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\oshi.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "resp_akushoku reijou.json",
+                        "value": {
+                            "name": "resp_akushoku reijou.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\resp_akushoku reijou.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "resp_misshitsu ougonjidai.json",
+                        "value": {
+                            "name": "resp_misshitsu ougonjidai.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\resp_misshitsu ougonjidai.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "resp_oshi.json",
+                        "value": {
+                            "name": "resp_oshi.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\resp_oshi.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "savage fang.json",
+                        "value": {
+                            "name": "savage fang.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\savage fang.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "アルセーヌ・ルパン対明智小五郎　黄金仮面の真実 (角川文庫).html.json",
+                        "value": {
+                            "name": "アルセーヌ・ルパン対明智小五郎　黄金仮面の真実 (角川文庫).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\アルセーヌ・ルパン対明智小五郎　黄金仮面の真実 (角川文庫).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "サベージファングお嬢様　史上最強の傭兵は史上最凶の暴虐令嬢となって二度目の世界を無双する (富士見ファンタジア文庫).html.json",
+                        "value": {
+                            "name": "サベージファングお嬢様　史上最強の傭兵は史上最凶の暴虐令嬢となって二度目の世界を無双する (富士見ファンタジア文庫).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\サベージファングお嬢様　史上最強の傭兵は史上最凶の暴虐令嬢となって二度目の世界を無双する (富士見ファンタジア文庫).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "八月十五日に吹く風 (講談社文庫).html.json",
+                        "value": {
+                            "name": "八月十五日に吹く風 (講談社文庫).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\八月十五日に吹く風 (講談社文庫).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "密室黄金時代の殺人 雪の館と六つのトリック (宝島社文庫).html.json",
+                        "value": {
+                            "name": "密室黄金時代の殺人 雪の館と六つのトリック (宝島社文庫).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\密室黄金時代の殺人 雪の館と六つのトリック (宝島社文庫).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "悪食令嬢と狂血公爵　～その魔物、私が美味しくいただきます！～ (Kラノベブックスf).html.json",
+                        "value": {
+                            "name": "悪食令嬢と狂血公爵　～その魔物、私が美味しくいただきます！～ (Kラノベブックスf).html.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\悪食令嬢と狂血公爵　～その魔物、私が美味しくいただきます！～ (Kラノベブックスf).html.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "response__ecriture.json",
+                        "value": {
+                            "name": "response__ecriture.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\add-book-response\\response__ecriture.json",
+                            "ext": "json"
+                        }
+                    },
+                    {
+                        "name": "response__meta-ecriture.json",
+                        "value": {
+                            "name": "response__meta-ecriture.json",
+                            "path": "C:\\fuck\\flfl-scripts\\output\\add-book-response\\response__meta-ecriture.json",
+                            "ext": "json"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

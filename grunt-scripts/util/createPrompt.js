@@ -34,6 +34,13 @@ class GruntPrompt {
         return fse.writeFile(`${this.dest}`, JSON.stringify(
             this.structure, null ,4
         ))
+        .then(() => {
+            return this.structure
+        })
+        .catch((err) => {
+            console.warn('Error creating prompt', err)
+            return Promise.reject(err)
+        })
     }
 }
 

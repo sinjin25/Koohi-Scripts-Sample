@@ -4,7 +4,7 @@
             {
                 "config": "move-files.selectedJSON",
                 "type": "list",
-                "message": "What JSON file would you like to associate akushoku reijou.csv with?",
+                "message": "What JSON file would you like to associate ecriture.jpg with?",
                 "choices": [
                     {
                         "name": "ecriture.json"

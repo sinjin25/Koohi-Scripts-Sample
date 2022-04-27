@@ -6,5 +6,6 @@ module.exports = {
     "rn-raw-files-files": require('./rename-raw-files.json'),
     "extract-readability": require('./extract-readability.json'), 
     "zip": require('./zip.json'),
+    "send-book": require('./send-book.json'),
     ...require('./globalConfig.json')
 }
