@@ -1,0 +1,12 @@
+{
+    "dest": "C:\\Users\\Sinj\\Desktop\\library\\Backup 9-13",
+    "src": "C:\\Users\\Sinj\\Downloads\\release 4-20",
+    "ZLIB_BEST_COMPRESSION": 9,
+    "BOOK_TYPES": ["Books", "Anime", "Drama", "Games", "Other"],
+    "WARNINGS": {
+        "MISSING_INPUT_CATEGORY": "No category folder selected. Aborting.",
+        "MISSING_INPUT_ARCHIVE": "No archive name presented. Ending.",
+        "DUPLICATE_ARCHIVE_FILE": "Archive already exists. Aborting.",
+        "REQUESTED_ABORT": "User requested an abort."
+    }
+}

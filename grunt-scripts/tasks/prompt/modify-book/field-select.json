@@ -1,0 +1,69 @@
+{
+    "options": {
+        "questions": [
+            {
+                "type": "list",
+                "config": "modify-book.selectedFieldToModify",
+                "message": "What field do you want to modify?",
+                "default": null,
+                "choices": [
+                    {
+                        "name": "\u001b[31mfilename\u001b[39m",
+                        "value": "filename"
+                    },
+                    {
+                        "name": "\u001b[31mpermission\u001b[39m",
+                        "value": "permission"
+                    },
+                    {
+                        "name": "\u001b[31mreadability\u001b[39m",
+                        "value": "readability"
+                    },
+                    {
+                        "name": "\u001b[31mtitle\u001b[39m",
+                        "value": "title"
+                    },
+                    {
+                        "name": "\u001b[31mvocab_list\u001b[39m",
+                        "value": "vocab_list"
+                    },
+                    {
+                        "name": "\u001b[32m---\u001b[39m",
+                        "value": "---"
+                    },
+                    {
+                        "name": "\u001b[32mmedium\u001b[39m",
+                        "value": "medium"
+                    },
+                    {
+                        "name": "\u001b[32mtitle_jp\u001b[39m",
+                        "value": "title_jp"
+                    },
+                    {
+                        "name": "\u001b[32minfo\u001b[39m",
+                        "value": "info"
+                    },
+                    {
+                        "name": "\u001b[32mbuy\u001b[39m",
+                        "value": "buy"
+                    },
+                    {
+                        "name": "\u001b[32mepisodes\u001b[39m",
+                        "value": "episodes"
+                    },
+                    {
+                        "name": "\u001b[32maired\u001b[39m",
+                        "value": "aired"
+                    }
+                ]
+            },
+            {
+                "type": "input",
+                "config": "modify-book.selectedFieldValue",
+                "message": "What value for the field?",
+                "default": null,
+                "choices": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "options": {
+        "questions": [
+            {
+                "config": "amazon-download.url",
+                "message": "What is the url?",
+                "type": "input"
+            }
+        ]
+    }
+}

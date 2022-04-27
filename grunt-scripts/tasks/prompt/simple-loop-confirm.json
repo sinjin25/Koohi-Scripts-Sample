@@ -1,0 +1,13 @@
+{
+    "options": {
+        "questions": [
+            {
+                "config": "proceed",
+                "type": "confirm",
+                "message": "Would you like to do this again?",
+                "choices": [],
+                "default": null
+            }
+        ]
+    }
+}

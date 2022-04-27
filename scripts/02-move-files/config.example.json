@@ -1,6 +1,0 @@
-{
-    "dump": "C:\\dump",
-    "JSONdump": "C:\\JSON",
-    "csvLocation": ["C:\\csvUploads"],
-    "imgLocation": ["C:\\imgUploads", "C:\\backup\\img"]
-}
