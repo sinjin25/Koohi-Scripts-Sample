@@ -35,12 +35,24 @@ module.exports = function(grunt) {
             },
             MOVE_FILES: {
                 task: "grunt move-files".green,
-                description: `Move the renamed files from 'rename-raw-files' to the correct directories for the application (MYSQL upload folder, cover folder, etc.)`.blue
+                description: `Move the renamed files from 'rename-raw-files' to the correct directories for the application (MYSQL upload folder, cover folder, etc.). Optionally, automatically fill in fields for related book JSONs.`.blue
             },
             READABILITY: {
                 task: "grunt extract-readability".green,
                 description: `Check the 'xxx read.txt' files for the readability score. Record it in a centralized log. This will be useful when running 'modify-book' later`.blue
             },
+            MODIFY_BOOK: {
+                task: "grunt modify-book".green,
+                description: `Check for missing keys in a xx.json file. Has the option to manually update any keys in said file.`.blue
+            },
+            ZIP: {
+                task: "grunt zip".green,
+                description: `Zip selected files and then file them in the correct folders depending on genre.`.blue
+            },
+            SEND_BOOK: {
+                task: "grunt send-book".green,
+                description: `Translate a JSON book file into a server request. Send it to the server.`.blue
+            }
         }
         const keys = Object.keys(TASKS)
         keys.forEach((aKey) => {
