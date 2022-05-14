@@ -32,7 +32,10 @@
             )
             return prompt.commitPrompt()
         })
-        .then(done)
+        .then((data) => {
+            grunt.config('prompt.send-book', data)
+            return done()
+        })
     })
 
     grunt.registerTask(PREVIEW, function() {
@@ -85,8 +88,7 @@
     })
 
     grunt.registerTask(META, function() {
-        /* const insertId = grunt.config.get(`${NAMESPACE}.insertId`) */
-        const insertId = 528
+        const insertId = grunt.config.get(`${NAMESPACE}.insertId`)
         const FILE = grunt.config(`${NAMESPACE}.selectedFile`)
         const PATH_TO_FILE = FILE.path
         const META_URL = grunt.config.get(`${NAMESPACE}.metaUrl`)
@@ -115,6 +117,7 @@
         PREVIEW,
         ASK_PROCEED,
         MAIN,
+        META
     ])
 
     grunt.registerTask('send-meta', [

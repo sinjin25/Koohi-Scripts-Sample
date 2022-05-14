@@ -20,7 +20,7 @@
         })
         .then((prompt) => {
             const getFiles = require('../util/getFiles')
-            return getFiles(grunt.myGetConfig('dataSrc', `${NAMESPACE}.src`))
+            return getFiles(grunt.myGetConfig('dataSrc', `${NAMESPACE}.dataSrc`))
             .then((files) => {
                 prompt.addQuestion({
                     type: 'checkbox',
