@@ -1,13 +1,1 @@
-{
-    "options": {
-        "questions": [
-            {
-                "config": "proceed",
-                "type": "confirm",
-                "message": "Would you like to proceed?",
-                "choices": [],
-                "default": null
-            }
-        ]
-    }
-}
+{}
