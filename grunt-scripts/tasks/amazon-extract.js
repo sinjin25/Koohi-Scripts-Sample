@@ -63,7 +63,10 @@
             })
         })
         return Promise.allSettled(actions)
-        .then(done)
+        .then(() => {
+            grunt.log.writeln('Try "grunt extract-readability" next?')
+            return done()
+        })
     })
     grunt.registerTask('amazon-extract__add-choices', function() {
         const fse = require('fs-extra')

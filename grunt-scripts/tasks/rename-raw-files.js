@@ -88,7 +88,10 @@ module.exports = function(grunt) {
         )
 
         return Promise.allSettled(actions)
-        .then(done)
+        .then(() => {
+            grunt.log.writeln('Try "grunt send-book" next?')
+            return done()
+        })
     })
 
     // ============== BUNDLE ================ //

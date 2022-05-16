@@ -69,16 +69,11 @@
             const set = new Set(itemSet)
             // used for map-prompts
             grunt.config('move-files.filesToMap', Array.from(set))
-            done()
+            grunt.log.writeln('Try "grunt extract-readability" next?')
+            return done()
         })
     })
 
-    grunt.registerTask('temp', function() {
-        grunt.config('move-files.filesToMap', [
-            'myFile1.csv', 'myFile2.jpg', 'myFile3.csv',
-        ])
-        grunt.log.writeln(`manually set move-files.filesToMap as ${grunt.config('move-files.filesToMap').join(',')}`)
-    })
     grunt.registerTask('move-files__loop-add-choices', function() {
         const files = grunt.config.get('move-files.filesToMap')
         if (!files || files.length === 0) {

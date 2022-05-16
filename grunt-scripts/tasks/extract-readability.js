@@ -37,7 +37,10 @@
             }
             return chain
         })
-        .then(done)
+        .then(() => {
+            grunt.log.writeln('Try "grunt modify-book" next?')
+            return done()
+        })
         .catch((err) => {
             grunt.warn(err)
         })

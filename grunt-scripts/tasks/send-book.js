@@ -107,7 +107,10 @@
 
             return logResponse(dest, `meta-${FILE.name}`, response)
         })
-        .then(done)
+        .then(() => {
+            grunt.log.writeln('Try "grunt zip" next?')
+            return done()
+        })
     })
 
     // ===================== BUNDLE ==================== //

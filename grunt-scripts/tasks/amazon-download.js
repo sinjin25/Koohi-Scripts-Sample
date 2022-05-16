@@ -6,7 +6,6 @@ const openPage = require('../amazon-download/openPage')
  */
 module.exports = function(grunt) {
     grunt.registerTask('amazon-download-func', function() {
-        grunt.log.writeln('Using 11111')
         const done = this.async()
         const url = grunt.option('src') || grunt.config.get('amazon-download.url')
         if (!url) grunt.warn('Missing a url. Use the url flag ex: grunt amazon-download --src=123')
@@ -40,7 +39,10 @@ module.exports = function(grunt) {
             .then(() => {
                 return driver.quit()
             })
-            .then(done)
+            .then(() => {
+                grunt.log.writeln('Try "grunt amazon-extract" next?')
+                return done()
+            })
         })
     })
     // ===================== BUNDLE =================== //
