@@ -22,11 +22,11 @@ module.exports = function(grunt) {
         grunt.log.writeln('Grunt is working. Tasks to run directly include:')
         const TASKS = {
             DOWNLOAD_AMAZON: {
-                task: "grunt download-amazon".green,
+                task: "grunt amazon-download".green,
                 description: `Download a (product) page from amazon. Follow up with the extract-amazon script`.blue
             },
             EXTRACT_AMAZON: {
-                task: "grunt extract-amazon".green,
+                task: "grunt amazon-extract".green,
                 description: `Extract the book meta out of an amazon page. Use before 'move-files' etc.`.blue
             },
             RENAME_RAW_FILES: {

@@ -54,7 +54,7 @@
             return prompt.commitPrompt()
         })
         .then(() => {
-            grunt.config('prompt:zip', require('./prompt/zip.json'))
+            grunt.config('prompt.zip', require('./prompt/zip.json'))
             done()
         })
     })

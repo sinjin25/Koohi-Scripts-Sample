@@ -33,7 +33,7 @@
             )
         })
         .then(() => {
-            grunt.config('prompt:move-files__select', require('./prompt/move-files/select.json'))
+            grunt.config('prompt.move-files__select', require('./prompt/move-files/select.json'))
             done()
         })
     })
@@ -104,12 +104,12 @@
             if (files.length === 0) return grunt.warn(`No matching files found in folder ${src}`)
             return populate(
                 PATH,
-                files,
+                ['none', ...files],
                 `What JSON file would you like to associate ${grunt.config.get('move-files.filesToMap').slice(0, 1)} with?`
             )
         })
         .then(() => { // modify config
-            grunt.config('prompt:move-files__select-meta', require('./prompt/move-files/meta-select.json'))
+            grunt.config('prompt.move-files__select-meta', require('./prompt/move-files/meta-select.json'))
             done()
         })
         .catch((err) => {
@@ -118,12 +118,15 @@
     })
 
     grunt.registerTask('move-files__loop-add-meta', function() {
+        // guard
+        const done = this.async()
+        if (grunt.config.get('move-files.selectedJSON') === 'none') return done()
+
         const fse = require('fs-extra')
         const path = require('path')
         grunt.log.writeln(
             `Associating ${grunt.config.get('move-files.selectedJSON')} with ${grunt.config.get('move-files.filesToMap').slice(0, 1)}`
         )
-        const done = this.async()
         // get JSON
         const destPath = path.join(
             grunt.myGetConfig('dest', 'move-files.dest'), grunt.config.get('move-files.selectedJSON')
@@ -175,7 +178,7 @@
         // change question
         const options = grunt.config.get('prompt.move-files__select-meta.options')
         options.questions[0].message = `What JSON file would you like to associate ${grunt.config.get('move-files.filesToMap').slice(0, 1)} with?`
-        grunt.config('prompt:move-files__select-meta.options', options)
+        grunt.config('prompt.move-files__select-meta.options', options)
         if (filesToMap.length !== 0) {
             grunt.task.run('move-files-meta-loop')
         }

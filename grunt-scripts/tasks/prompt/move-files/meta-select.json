@@ -1,1 +1,20 @@
-{}
+{
+    "options": {
+        "questions": [
+            {
+                "config": "move-files.selectedJSON",
+                "type": "list",
+                "message": "What JSON file would you like to associate 51da50q0nPL.jpg with?",
+                "choices": [
+                    {
+                        "name": "none"
+                    },
+                    {
+                        "name": "【小説4巻】本好きの下剋上～司書になるためには手段を選んでいられません～第二部「神殿の巫女見習いI」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    }
+                ],
+                "default": null
+            }
+        ]
+    }
+}

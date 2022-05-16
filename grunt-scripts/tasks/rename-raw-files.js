@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             )
         })
         .then(() => {
-            grunt.config('prompt:rename-raw-files__select', require('./prompt/rename-raw-files/select.json'))
+            grunt.config('prompt.rn-raw-files__select', require('./prompt/rename-raw-files/select.json'))
             done()
         })
     })
