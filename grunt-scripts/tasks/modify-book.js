@@ -35,7 +35,7 @@ module.exports = function(grunt) {
             return prompt.commitPrompt()
         })
         .then((data) => {
-            grunt.config(ASK_FILE, data)
+            grunt.config(`prompt.modify-book__select`, data)
         })
         .then(done)
     })
@@ -94,17 +94,27 @@ module.exports = function(grunt) {
         const selectedFile = grunt.config(`${NAMESPACE}.selectedFile`)
         const fieldToModify = grunt.config(`${NAMESPACE}.selectedFieldToModify`)
         const newFieldValue = grunt.config(`${NAMESPACE}.selectedFieldValue`)
+        const workingObj = grunt.config(`${NAMESPACE}.workingObject`) || require(selectedFile.path) // get around cache of json file
         
-        const data = require(selectedFile.path)
-        const newData = {
-            ...data,
-            [fieldToModify]: newFieldValue
-        }
+        grunt.log.writeln(`${selectedFile} ${fieldToModify} ${newFieldValue}`)
+        
         return fse.writeFile(
             selectedFile.path,
-            JSON.stringify(newData, null, 4)
+            JSON.stringify({
+                ...workingObj,
+                [fieldToModify]: newFieldValue
+            }, null, 4)
         )
-        .then(done)
+        .then(() => {
+            grunt.config(`${NAMESPACE}.workingObject`, {
+                ...workingObj,
+                [fieldToModify]: newFieldValue
+            })
+            return done()
+        })
+        .catch((err) => {
+            grunt.log.error(err)
+        })
     })
 
     // ================ BUNDLE ================ //
@@ -120,7 +130,10 @@ module.exports = function(grunt) {
     grunt.registerTask(LOOP, function() {
         require('colors')
         if (grunt.config('proceed') === false) {
-            console.log('Task finished'.blue)
+            console.log('Task finished'.blue, 'try grunt send-book next?'.green)
+            const pathToObj = grunt.config(`${NAMESPACE}.selectedFile`).path
+            const finalJSON = require(pathToObj)
+            console.log(finalJSON)
             return
         }
         grunt.task.run([

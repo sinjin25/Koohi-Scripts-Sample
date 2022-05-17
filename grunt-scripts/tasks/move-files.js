@@ -104,7 +104,8 @@
             )
         })
         .then(() => { // modify config
-            grunt.config('prompt.move-files__select-meta', require('./prompt/move-files/meta-select.json'))
+            const x = require('./prompt/move-files/meta-select.json')
+            grunt.config('prompt.move-files__select-meta', x)
             done()
         })
         .catch((err) => {
@@ -163,7 +164,10 @@
         .catch((err) => {
             grunt.log.writeln(`${err}`)
         })
-        .then(done)
+        .then(() => {
+            grunt.log.writeln('Done. Try grunt modify-book next?')
+            return done()
+        })
     })
     grunt.registerTask('move-files__loop-clean', function() {
         // change filesToMap

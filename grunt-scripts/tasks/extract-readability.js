@@ -38,7 +38,7 @@
             return chain
         })
         .then(() => {
-            grunt.log.writeln('Try "grunt modify-book" next?')
+            grunt.log.writeln('Try "grunt modify-book" or "grunt rn-raw-files" next?')
             return done()
         })
         .catch((err) => {

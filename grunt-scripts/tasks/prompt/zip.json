@@ -1,1 +1,452 @@
-{}
+{
+    "options": {
+        "questions": [
+            {
+                "type": "checkbox",
+                "message": "What files do you want to archive?",
+                "config": "zip.selectedFiles",
+                "choices": [
+                    {
+                        "name": "514dQnY3EaL.jpg",
+                        "value": {
+                            "name": "514dQnY3EaL.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\514dQnY3EaL.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "515nfTwDI5L._SY346_.jpg",
+                        "value": {
+                            "name": "515nfTwDI5L._SY346_.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\515nfTwDI5L._SY346_.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "51aIZAbG62L.jpg",
+                        "value": {
+                            "name": "51aIZAbG62L.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\51aIZAbG62L.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "51da50q0nPL.jpg",
+                        "value": {
+                            "name": "51da50q0nPL.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\51da50q0nPL.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "51mpimiFe-L.jpg",
+                        "value": {
+                            "name": "51mpimiFe-L.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\51mpimiFe-L.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "51VO3gsl4HL._SY346_.jpg",
+                        "value": {
+                            "name": "51VO3gsl4HL._SY346_.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\51VO3gsl4HL._SY346_.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "51ZxKNbAuKL.jpg",
+                        "value": {
+                            "name": "51ZxKNbAuKL.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\51ZxKNbAuKL.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "61Ml-EkD0YL._SY346_.jpg",
+                        "value": {
+                            "name": "61Ml-EkD0YL._SY346_.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\61Ml-EkD0YL._SY346_.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "61PMl25SfdL._SY346_.jpg",
+                        "value": {
+                            "name": "61PMl25SfdL._SY346_.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\61PMl25SfdL._SY346_.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 10 read.txt",
+                        "value": {
+                            "name": "Bookworm 10 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 10 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 10.csv",
+                        "value": {
+                            "name": "Bookworm 10.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 10.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 10.txt",
+                        "value": {
+                            "name": "Bookworm 10.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 10.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 10_e0d32c6b-5e03-4280-a10d-7e24d20c7c85.jpg",
+                        "value": {
+                            "name": "Bookworm 10_e0d32c6b-5e03-4280-a10d-7e24d20c7c85.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 10_e0d32c6b-5e03-4280-a10d-7e24d20c7c85.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 11 read.txt",
+                        "value": {
+                            "name": "Bookworm 11 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 11 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 11.csv",
+                        "value": {
+                            "name": "Bookworm 11.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 11.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 11.txt",
+                        "value": {
+                            "name": "Bookworm 11.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 11.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 11_da941a09-7679-4485-9fac-a0ba45bed4a2.jpg",
+                        "value": {
+                            "name": "Bookworm 11_da941a09-7679-4485-9fac-a0ba45bed4a2.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 11_da941a09-7679-4485-9fac-a0ba45bed4a2.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 12 read.txt",
+                        "value": {
+                            "name": "Bookworm 12 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 12 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 12.csv",
+                        "value": {
+                            "name": "Bookworm 12.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 12.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 12.txt",
+                        "value": {
+                            "name": "Bookworm 12.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 12.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 12_c3a1ba7d-a9f8-4508-89c6-ea64b51b26cb.jpg",
+                        "value": {
+                            "name": "Bookworm 12_c3a1ba7d-a9f8-4508-89c6-ea64b51b26cb.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 12_c3a1ba7d-a9f8-4508-89c6-ea64b51b26cb.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 4 read.txt",
+                        "value": {
+                            "name": "Bookworm 4 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 4 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 4.csv",
+                        "value": {
+                            "name": "Bookworm 4.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 4.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 4.txt",
+                        "value": {
+                            "name": "Bookworm 4.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 4.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 4_b5f1d0b3-3542-4552-860e-15af49586936.jpg",
+                        "value": {
+                            "name": "Bookworm 4_b5f1d0b3-3542-4552-860e-15af49586936.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 4_b5f1d0b3-3542-4552-860e-15af49586936.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 5 read.txt",
+                        "value": {
+                            "name": "Bookworm 5 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 5 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 5.csv",
+                        "value": {
+                            "name": "Bookworm 5.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 5.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 5.txt",
+                        "value": {
+                            "name": "Bookworm 5.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 5.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 5_f361d7e3-8f05-4375-828b-f704ca947f01.jpg",
+                        "value": {
+                            "name": "Bookworm 5_f361d7e3-8f05-4375-828b-f704ca947f01.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 5_f361d7e3-8f05-4375-828b-f704ca947f01.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 6 read.txt",
+                        "value": {
+                            "name": "Bookworm 6 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 6 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 6.csv",
+                        "value": {
+                            "name": "Bookworm 6.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 6.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 6.txt",
+                        "value": {
+                            "name": "Bookworm 6.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 6.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 6_a5ee529b-1168-48fa-a799-52e0d47bd7aa.jpg",
+                        "value": {
+                            "name": "Bookworm 6_a5ee529b-1168-48fa-a799-52e0d47bd7aa.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 6_a5ee529b-1168-48fa-a799-52e0d47bd7aa.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 7 read.txt",
+                        "value": {
+                            "name": "Bookworm 7 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 7 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 7.csv",
+                        "value": {
+                            "name": "Bookworm 7.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 7.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 7.txt",
+                        "value": {
+                            "name": "Bookworm 7.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 7.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 7_1251851d-f1a2-46bc-9ca7-f7909d3353d5.jpg",
+                        "value": {
+                            "name": "Bookworm 7_1251851d-f1a2-46bc-9ca7-f7909d3353d5.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 7_1251851d-f1a2-46bc-9ca7-f7909d3353d5.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 8 read.txt",
+                        "value": {
+                            "name": "Bookworm 8 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 8 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 8.csv",
+                        "value": {
+                            "name": "Bookworm 8.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 8.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 8.txt",
+                        "value": {
+                            "name": "Bookworm 8.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 8.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 8_b3c9e1f8-a260-455e-8043-f2d9010f011d.jpg",
+                        "value": {
+                            "name": "Bookworm 8_b3c9e1f8-a260-455e-8043-f2d9010f011d.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 8_b3c9e1f8-a260-455e-8043-f2d9010f011d.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 9 read.txt",
+                        "value": {
+                            "name": "Bookworm 9 read.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 9 read.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 9.csv",
+                        "value": {
+                            "name": "Bookworm 9.csv",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 9.csv",
+                            "ext": "csv"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 9.txt",
+                        "value": {
+                            "name": "Bookworm 9.txt",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 9.txt",
+                            "ext": "txt"
+                        },
+                        "checked": false
+                    },
+                    {
+                        "name": "Bookworm 9_484c3f12-9fa5-410a-9abd-989295bf8a8d.jpg",
+                        "value": {
+                            "name": "Bookworm 9_484c3f12-9fa5-410a-9abd-989295bf8a8d.jpg",
+                            "path": "C:\\Users\\Sinj\\Downloads\\release 5-14\\Bookworm 9_484c3f12-9fa5-410a-9abd-989295bf8a8d.jpg",
+                            "ext": "jpg"
+                        },
+                        "checked": false
+                    }
+                ]
+            },
+            {
+                "type": "list",
+                "message": "What genre do you want to file this under?",
+                "default": null,
+                "config": "zip.selectedGenre",
+                "choices": [
+                    {
+                        "name": "Books",
+                        "value": "Books"
+                    },
+                    {
+                        "name": "Anime",
+                        "value": "Anime"
+                    },
+                    {
+                        "name": "Drama",
+                        "value": "Drama"
+                    },
+                    {
+                        "name": "Games",
+                        "value": "Games"
+                    },
+                    {
+                        "name": "Other",
+                        "value": "Other"
+                    }
+                ]
+            },
+            {
+                "type": "input",
+                "message": "What do you want to name the archive?",
+                "config": "zip.selectedArchiveName",
+                "choices": []
+            }
+        ]
+    }
+}

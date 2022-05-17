@@ -64,7 +64,7 @@
         })
         return Promise.allSettled(actions)
         .then(() => {
-            grunt.log.writeln('Try "grunt extract-readability" next?')
+            grunt.log.writeln('Try "grunt rn-raw-files" next?')
             return done()
         })
     })

@@ -8,6 +8,14 @@
                 "default": null,
                 "choices": [
                     {
+                        "name": "\u001b[31mreadability\u001b[39m",
+                        "value": "readability"
+                    },
+                    {
+                        "name": "\u001b[31mtitle\u001b[39m",
+                        "value": "title"
+                    },
+                    {
                         "name": "\u001b[31mvocab_list\u001b[39m",
                         "value": "vocab_list"
                     },
@@ -26,14 +34,6 @@
                     {
                         "name": "\u001b[32mpermission\u001b[39m",
                         "value": "permission"
-                    },
-                    {
-                        "name": "\u001b[32mreadability\u001b[39m",
-                        "value": "readability"
-                    },
-                    {
-                        "name": "\u001b[32mtitle\u001b[39m",
-                        "value": "title"
                     },
                     {
                         "name": "\u001b[32mtitle_jp\u001b[39m",

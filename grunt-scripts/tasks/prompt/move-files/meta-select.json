@@ -4,13 +4,37 @@
             {
                 "config": "move-files.selectedJSON",
                 "type": "list",
-                "message": "What JSON file would you like to associate 51da50q0nPL.jpg with?",
+                "message": "What JSON file would you like to associate 514dQnY3EaL.jpg with?",
                 "choices": [
                     {
                         "name": "none"
                     },
                     {
+                        "name": "【小説10巻】本好きの下剋上～司書になるためには手段を選んでいられません～第三部「領主の養女III」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説11巻】本好きの下剋上～司書になるためには手段を選んでいられません～第三部「領主の養女IV」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説12巻】本好きの下剋上～司書になるためには手段を選んでいられません～第三部「領主の養女V」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
                         "name": "【小説4巻】本好きの下剋上～司書になるためには手段を選んでいられません～第二部「神殿の巫女見習いI」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説5巻】本好きの下剋上～司書になるためには手段を選んでいられません～第二部「神殿の巫女見習いII」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説6巻】本好きの下剋上～司書になるためには手段を選んでいられません～第二部「神殿の巫女見習いIII」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説7巻】本好きの下剋上～司書になるためには手段を選んでいられません～第二部「神殿の巫女見習いIV」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説8巻】本好きの下剋上～司書になるためには手段を選んでいられません～第三部「領主の養女I」 (TOブックスラノベ) (Japanese Edition).html.json"
+                    },
+                    {
+                        "name": "【小説9巻】本好きの下剋上～司書になるためには手段を選んでいられません～第三部「領主の養女II」 (TOブックスラノベ) (Japanese Edition).html.json"
                     }
                 ],
                 "default": null

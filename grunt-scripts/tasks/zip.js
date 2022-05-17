@@ -82,6 +82,11 @@
             const archive = require('../zip/setupArchiver')(output, {
                 level: grunt.config(`${NAMESPACE}.ZLIB_BEST_COMPRESSION`)
             })
+            output.on('close', () => {
+                console.log(`Archived ${zipCategory} ${archiveName}`)
+                console.log(`Total bytes in zip: ${archive.pointer()}`)
+                console.log(`Archiving is now finished`)
+            })
             return archive
         })
         .then((archive) => {
